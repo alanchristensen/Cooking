@@ -33,10 +33,10 @@ body {
 .recipe {
 	display: inline-box;
 	position: relative;
-	width: 23%;
+	width: 22.5%;
 	height: 180px;
-	padding-left: 10px;
-	padding-top: 10px;
+	padding-left: 1%;
+	padding-top: 1%;
 	float: left;
 	margin: 5px;
 	border-radius: 2px;
