@@ -29,6 +29,12 @@ body {
 	position: relative;
 	width: 70%;
 }
+h3 {
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+	font-style: italic;
+}
 
 .recipe {
 	display: inline-box;
@@ -57,7 +63,7 @@ body {
 	width: 100%;
 }
 
-.ingredients, .directions , .source{
+.ingredients, .directions , .source, .notes {
 	display: none;
 	font-family: Helvetica;
 }
@@ -67,7 +73,7 @@ body {
 	width: 30%;
 	display: block;
 	border-left: 1px solid #e0e0e0;
-	background-color: #f6f6f6;
+	background-color: #fbfbfb;
 }
 #current .recipe {
 	padding: 0;
@@ -75,28 +81,31 @@ body {
 	margin: 0;
 	width: 100%;
 }
+#current div {
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+}
 #current .name {
 	color: black;
+	font-size: 16px;
 	top: 0;
 	background-color: #e0e0e0;
 	padding: 5px 10px;
 }
-#current .directions, #current .ingredients, #current .source {
-	display: block;
-}
 #current .ingredients {
-	font-size: 12px;
-	padding: 0 10px;
 	white-space: pre-wrap;
 	background-color: #f0f0f0;
 }
 #current .directions {
-	font-size: 12px;
-	margin: 0 10px;
+	white-space: pre-wrap;
+	background-color: #f6f6f6;
+}
+#current .notes {
 	white-space: pre-wrap;
 }
 #current .source {
-	font-size: 12px;
+	display: block;
 	color: #4195ce;
 	text-decoration: none;
 	font-style: italic;

@@ -1,3 +1,17 @@
+var loadRecipe = function(elem) {
+	var content = elem.clone();
+	fix(content, 'notes');
+	fix(content, 'ingredients');
+	fix(content, 'directions');
+	$('#current').html(content);
+}
+
+var fix = function(elem, clazz) {
+	var target = elem.find('.' + clazz);
+	target.text($.trim(target.text()));
+	target.prepend('<h3>' + clazz + '</h3>');
+}
+
 $(window).load(function(){
 
 	$('.recipe').find('img').each(function() {
@@ -6,20 +20,19 @@ $(window).load(function(){
 	});
 
 	$('.recipe').click(function() {
-		$('#current').html($(this).clone());
-		var name = $(this).find('.name').text().replace(/\W/g, '');
-		window.location.hash = name;
+		loadRecipe($(this));
+		window.location.hash = $(this).find('.name').text().replace(/\W/g, '');;
 	});
 	
 	if (window.location.hash) {
 		$('.recipe').each(function() {
 			var name = $(this).find('.name').text().replace(/\W/g, '');
 			if ('#' + name == window.location.hash) {
-				$('#current').html($(this).clone());
+				loadRecipe($(this));
 			}
 		});
 	} else {
-		$('#current').html($('.recipe').eq(0).clone());
+		loadRecipe($('.recipe').eq(0));
 	}
  
 });
