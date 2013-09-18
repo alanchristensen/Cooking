@@ -13,10 +13,10 @@ var fix = function(elem, clazz) {
 }
 
 $(window).load(function(){
-
-	$('.recipe').find('img').each(function() {
-		var imgClass = (this.width/this.height > 1) ? 'wide' : 'tall';
-		$(this).addClass(imgClass);
+	$('.recipe .name').each(function() {
+		var that = $(this);
+		var img = $('<img src="img/' + that.text().replace(/\W/g, '') + '.jpg">');
+		$(this).after(img);
 	});
 
 	$('.recipe').click(function() {
