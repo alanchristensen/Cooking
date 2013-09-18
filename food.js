@@ -21,7 +21,8 @@ $(window).load(function(){
 
 	$('.recipe').click(function() {
 		loadRecipe($(this));
-		window.location.hash = $(this).find('.name').text().replace(/\W/g, '');;
+		var hash = $(this).find('.name').text().replace(/\W/g, '');
+		window.location.replace(('' + window.location).split('#')[0] + '#' + hash);
 	});
 	
 	if (window.location.hash) {
