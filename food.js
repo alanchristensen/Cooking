@@ -1,4 +1,6 @@
 var loadRecipe = function(elem) {
+	$('.selected').removeClass('selected');
+	elem.addClass('selected');
 	var content = elem.clone();
 	fix(content, 'notes');
 	fix(content, 'ingredients');

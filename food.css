@@ -47,6 +47,13 @@ body {
 	position: relative;
 	width: 70%;
 	Xoverflow-y: scroll;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 h3 {
 	margin: 0;
@@ -87,6 +94,11 @@ h3 {
 	height: 100%;
 	width: 100%;
 }
+.recipe.selected img{
+	xborder: 1px solid #FF6600;
+	Xbox-shadow: 0 0 2px orange;
+}
+
 
 .ingredients, .directions , .source, .notes {
 	display: none;
@@ -114,10 +126,10 @@ h3 {
 	padding: 10px;
 }
 #current .name {
-	color: black;
+	color: white;
 	font-size: 16px;
 	top: 0;
-	background-color: #e0e0e0;
+	background-color: #FF6600;
 	padding: 5px 10px;
 }
 #current .ingredients {
@@ -133,7 +145,7 @@ h3 {
 }
 #current .source {
 	display: block;
-	color: #4195ce;
+	color: #FF6600;
 	text-decoration: none;
 	font-style: italic;
 	padding: 0 10px;
