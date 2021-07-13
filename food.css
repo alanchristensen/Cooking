@@ -185,15 +185,16 @@ right: 0;
 	padding: 5px 10px;
 }
 #current .ingredients {
-	white-space: pre-wrap;
+	white-space: pre-line;
 	background-color: #f0f0f0;
 }
 #current .directions {
-	white-space: pre-wrap;
+	white-space: pre-line;
 	background-color: #f6f6f6;
+	text-align: left;
 }
 #current .notes {
-	white-space: pre-wrap;
+	white-space: pre-line;
 }
 #current .source {
 	display: block;
